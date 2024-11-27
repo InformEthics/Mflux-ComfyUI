@@ -1,12 +1,11 @@
-from .Mflux_Comfy.Mflux_Air import QuickMfluxNode, MfluxModelsLoader, MfluxModelsDownloader, MfluxCustomModels
-from .Mflux_Comfy.Mflux_Pro import MfluxLoadImage, MfluxLorasLoader, MfluxControlNetLoader  # 仅导入所需的非实验节点
+from .ComfyMflux import QuickMfluxNode, MfluxModelsLoader, MfluxModelsDownloader, MfluxCustomModels, MfluxLoadImg2Img, MfluxLorasLoader, MfluxControlNetLoader
 
 NODE_CLASS_MAPPINGS = {
     "QuickMfluxNode": QuickMfluxNode,
     "MfluxModelsLoader": MfluxModelsLoader,
     "MfluxModelsDownloader": MfluxModelsDownloader,
     "MfluxCustomModels": MfluxCustomModels,
-    "MfluxLoadImage": MfluxLoadImage,
+    "MfluxLoadImg2Img": MfluxLoadImg2Img,
     "MfluxLorasLoader": MfluxLorasLoader,
     "MfluxControlNetLoader": MfluxControlNetLoader,
 }
@@ -16,7 +15,7 @@ NODE_DISPLAY_NAME_MAPPINGS = {
     "MfluxModelsLoader": "MFlux Models Loader",
     "MfluxModelsDownloader": "MFlux Models Downloader",
     "MfluxCustomModels": "MFlux Custom Models",
-    "MfluxLoadImage": "MFlux Load Image",
+    "MfluxLoadImg2Img": "MFlux Img2Img Loader",
     "MfluxLorasLoader": "MFlux Loras Loader",
     "MfluxControlNetLoader": "MFlux ControlNet Loader",
 }
