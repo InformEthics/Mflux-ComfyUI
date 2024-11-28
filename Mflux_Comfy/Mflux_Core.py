@@ -168,7 +168,7 @@ def generate_image(prompt, model, seed, width, height, steps, guidance, quantize
 
     return (tensor_image,)
 
-def save_images_with_metadata(images, prompt, model, quantize, Local_model, seed, height, width, steps, guidance, lora_paths, lora_scales, image_path, strength, filename_prefix="Mflux", full_prompt=None, extra_pnginfo=None):
+def save_images_with_metadata(images, prompt, model, quantize, Local_model, seed, height, width, steps, guidance, lora_paths, lora_scales, image_path, image_strength, filename_prefix="Mflux", full_prompt=None, extra_pnginfo=None):
     
     output_dir = folder_paths.get_output_directory()
     full_output_folder, filename, counter, subfolder, filename_prefix = folder_paths.get_save_image_path(
@@ -215,7 +215,7 @@ def save_images_with_metadata(images, prompt, model, quantize, Local_model, seed
             "guidance": guidance if model == "dev" else None,
             "Local_model": Local_model,
             "init_image_path": image_path,
-            "init_image_strength": strength,
+            "init_image_strength": image_strength,
             "lora_paths": lora_paths,
             "lora_scales": lora_scales,
         }
